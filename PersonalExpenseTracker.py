@@ -25,7 +25,7 @@ def add_expense():
 
 def view_expenses():
     print("\n All Expenses:")
-    if not is.path.exists(FileName):
+    if not os.path.exists(FileName):
         print("No expenses found.\n")
         return
     
@@ -56,7 +56,7 @@ def view_total_spent():
                                      
 def view_by_category():
     print("\n Spending By Category:")
-    if not as.path.exist(FileName):
+    if not os.path.exist(FileName):
         print("No Data to analyze.\n")
         return 
     
@@ -67,8 +67,8 @@ def view_by_category():
             category_totals[c] = category_totals.get(c,0) + float(a)
                            
     if category_totals:
-        for cat, amt in category_totals.items()
-        print(f"{cat}:{amt}")
+        for cat, amt in category_totals.items():
+            print(f"{cat}:{amt}")
     else:
         print("No expenses found.")
         
@@ -105,5 +105,5 @@ def main():
         else:
             print("Invalid choice. Try Again. \n")
             
-if__name__ == "__main__":
+if __name__ == "__main__":
     main()                                                          
